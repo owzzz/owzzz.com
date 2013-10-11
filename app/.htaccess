@@ -255,6 +255,12 @@ AddDefaultCharset utf-8
 #    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # </IfModule>
 
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^owzzz.com
+    RewriteRule ^/?$ /app [R=301]
+</IfModule>
+
+
 
 # ##############################################################################
 # # SECURITY                                                                   #
